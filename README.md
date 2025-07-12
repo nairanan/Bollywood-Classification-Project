@@ -1,2 +1,2 @@
-# Superhero Classification Project
+# Bollywood Classification Project
 ## By Ananthu Nair
