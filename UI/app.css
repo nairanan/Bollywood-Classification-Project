@@ -26,9 +26,14 @@
   border-style: dashed;
 }
 
+.title-large {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 
 .error {
-  font-family: MerriweatherRegular;
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-size: 30px;
   line-height: initial;
   color: blue;
