@@ -2,7 +2,7 @@ from flask import Flask, request, jsonify, send_from_directory
 import utility
 import os
 
-app = Flask(__name__, static_folder='..UI')
+app = Flask(__name__, static_folder='../UI')
 
 @app.route('/')
 def serve_index():
