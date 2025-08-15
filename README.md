@@ -1,11 +1,16 @@
 # Bollywood Classification Project
 ## By Ananthu Nair
 
-This project is a machine learning image classifier, which can accurately classify images of the 5 famous Bollywood actors & actresses: Amitabh Bachchan, Kareena Kapoor, Shah Rukh Khan, Deepika Padukone, and Hrithik Roshan. 
+This project is a machine learning image classifier, which can accurately classify images of the 5 famous Bollywood actors & actresses: Amitabh Bachchan, Kareena Kapoor, Shah Rukh Khan, Deepika Padukone, and Hrithik Roshan. To access the live site, go to:
+https://bollywood-classification-project.onrender.com
+
+Simply upload an image of one of the 5 actors and click classify for a prediction.
+
+## Project Process:
 
 ### Step 1. Data Collection:
 
-Used batch image processor to automatically download large quantities of images from google images for each actor/actress
+Used batch image processor to automatically download large quantities of images from google images for each actor/actress.
 
 ### Step 2. Data Cleaning:
 
@@ -19,6 +24,7 @@ During this step, each image is transformed using wavelet transformation. This c
 After the training data had been finalized, the model could be trained and optimized. The data was split into training and test data (80/20 split) and then run with a sample model and hyperparameters. To identify which would be the optimal model, GridSearchCV was used to automate permutations of models and hyperparameters. The resulting model was then saved to a file.
 
 ### Step 5. Server Hosting & Web Dev
-After the model is complete and fully functional, I set up a python flask server with a classify image function that uses the saved model to run predictions. The utility file contains the functions that the server will use to carryout this process, for example, functions to crop the uploaded image, perform wavelet transformations, stack the images, and then run the prediction and get an output. These functions use base64 encoded strings to process the images. Next, I created a very simple UI in html along with javascript code to accept user uploaded images and handle the hiding/showing of certain elements depending on the prediction results.
+After the model is complete and fully functional, I set up a python flask server with a classify image function that uses the saved model to run predictions. The utility file contains the functions that the server will use to carryout this process, for example, functions to crop the uploaded image, perform wavelet transformations, stack the images, and then run the prediction and get an output.  These functions use base64 encoded strings to process the images. The server interacts with the frontend to receive and service requests in real time. Next, I created a very simple UI in html along with javascript code to accept user uploaded images and handle the hiding/showing of certain elements depending on the prediction results.
 
-### Step 6. Cloud Deployment
+### Step 6. Live Deployment
+Lastly, I deployed the model using Render, an online service that allows you to link a github repository and host dynamic websites. 
